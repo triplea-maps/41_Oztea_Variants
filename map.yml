@@ -1,0 +1,13 @@
+map_name: 41_Oztea
+games:
+- game_name: 41 Oztea
+  file_name: 41_Oztea.xml
+- game_name: 41 Oztea Island
+  file_name: 41_Oztea_Island.xml
+- game_name: 41 Oztea Militia
+  file_name: 41_Oztea_Militia.xml
+- game_name: 41 Oztea SBR
+  file_name: 41_Oztea_SBR.xml
+- game_name: 41 Oztea SBR Militia
+  file_name: 41_Oztea_SBR_Militia.xml
+version: 0
