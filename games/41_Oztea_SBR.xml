@@ -5023,41 +5023,7 @@
 					<option name="placementPerTerritory" value="9999999"/>
 					<option name="unlimitedProduction" value="true"/>
 				</attachment>
-				
-				<!-- Americans in OOB are not allowed to move to or through these sea zones:
-						125 Sea Zone:111 Sea Zone:119 Sea Zone:109 Sea Zone:104 Sea Zone:91 Sea Zone:87 Sea Zone:83 Sea Zone:70 Sea Zone:71 Sea Zone:72 Sea Zone:76 Sea Zone:80 Sea Zone:79 Sea Zone
-					
-					 Americans in Alpha +3 are not allowed to end their movement in:
-						Europe board: any sea zone not touching an American territory, plus 102 sz
-						TODO: We need to disallow a movement ending in a territory
-						TODO: Currently we disallow any movement into, instead of just disallowing the ending of movement in.  So, for example, SZ 106 and 116 could be moved into on the way to 121.
-							65 Sea Zone:66 Sea Zone:85 Sea Zone:86 Sea Zone:88 Sea Zone:90 Sea Zone:103 Sea Zone:106 Sea Zone:107 Sea Zone:116 Sea Zone:117 Sea Zone:120 Sea Zone:122 Sea Zone
-						Pacific board: any sea zone touching a Japanese controlled territory
-						TODO: Currently we disallow any movement into, instead of just disallowing the ending of movement in.  So, for example, SZ 17, 22, 32, 33, 34, and 37 could all be moved through on the way to another territory.
-						TODO: Currently we have a "set list" of territories. Obviously if Japan conquers more territories, then this list should expand, but it doesn't yet.
-							6 Sea Zone:17 Sea Zone:19 Sea Zone:20 Sea Zone:22 Sea Zone:32 Sea Zone:34 Sea Zone:33 Sea Zone:36 Sea Zone:37 Sea Zone
-				-->
-				<attachment name="rulesAttachment" attachTo="Americans" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-                	<option name="movementRestrictionTerritories" value="65 Sea Zone:66 Sea Zone:85 Sea Zone:86 Sea Zone:88 Sea Zone:90 Sea Zone:103 Sea Zone:106 Sea Zone:107 Sea Zone:116 Sea Zone:117 Sea Zone:120 Sea Zone:122 Sea Zone:19 Sea Zone:20 Sea Zone:36 Sea Zone"/>
-					<!-- :6 Sea Zone:17 Sea Zone:22 Sea Zone:32 Sea Zone:33 Sea Zone:34 Sea Zone:37 Sea Zone -->
-                	<option name="movementRestrictionType" value="disallowed"/>
-                </attachment>
-				
-				<!-- Japanese in Alpha +3 are not allowed to end their movement in:
-						Any Sea zone within 2 spaces of Alaska or Western United States
-							1 Sea Zone:2 Sea Zone:3 Sea Zone:8 Sea Zone:9 Sea Zone:10 Sea Zone:11 Sea Zone:12 Sea Zone
-				-->
-				<attachment name="rulesAttachment" attachTo="Japanese" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-                	<option name="movementRestrictionTerritories" value="1 Sea Zone:2 Sea Zone:3 Sea Zone:8 Sea Zone:9 Sea Zone:10 Sea Zone:11 Sea Zone:12 Sea Zone"/>
-                	<option name="movementRestrictionType" value="disallowed"/>
-                </attachment>
 
-                                 <attachment name="rulesAttachment" attachTo="Russians" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-                	<option name="movementRestrictionTerritories" value="6 Sea Zone:2 Sea Zone:7 Sea Zone:8 Sea Zone"/>
-                	<option name="movementRestrictionType" value="disallowed"/>
-                </attachment>
-				
-			
 		<!-- Political Action Attachments -->
 				<attachment name="politicalActionAttachment_Axis_To_War_With_TrueNeutrals" attachTo="Germans" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
 					<option name="conditions" value="conditionAttachment_Germans_Not_Yet_At_War_With_TrueNeutrals"/>
